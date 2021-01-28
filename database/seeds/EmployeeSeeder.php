@@ -1,6 +1,6 @@
 <?php
 
-use App\Employee;
+use App\Models\Employee;
 use Illuminate\Database\Seeder;
 
 class EmployeeSeeder extends Seeder
@@ -49,29 +49,31 @@ class EmployeeSeeder extends Seeder
         $employee = new Employee();
         $employee->name = 'John Doe';
         $employee->active = 0;
-        $employee->company_id = 1;
+        $employee->company_id = 2;
         $employee->save();
 
         $employee = new Employee();
         $employee->name = 'Corge';
-        $employee->company_id = 1;
+        $employee->company_id = 2;
         $employee->save();
 
         $employee = new Employee();
         $employee->name = 'Grault';
-        $employee->company_id = 1;
+        $employee->company_id = 2;
         $employee->save();
 
         ////////////////////////////////////////////////////////////////
 
         $employee = new Employee();
         $employee->name = 'Waldo';
-        $employee->company_id = 1;
+        $employee->active = 0;
+        $employee->company_id = 3;
         $employee->save();
 
         $employee = new Employee();
         $employee->name = 'Fred';
-        $employee->company_id = 1;
+        $employee->active = 0;
+        $employee->company_id = 3;
         $employee->save();
     }
 }
