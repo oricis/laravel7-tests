@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/welcome', 'welcome');
+
+Route::get('companies-with-active-employees', 'QueriesController@companies')
+    ->name('companies.employees.active');

@@ -34,6 +34,10 @@
                 position: relative;
             }
 
+            .top-10 {
+                margin-top: 10%;
+            }
+
             .top-right {
                 position: absolute;
                 right: 10px;
@@ -84,7 +88,14 @@
                     Laravel 7
                 </div>
 
-                <div class="links">
+                <div class="flex-center">
+
+                    <a href="{{ route('companies.employees.active') }}" class="">
+                        Ver empresas con empleados activos
+                    </a>
+                </div>
+
+                <div class="links top-10">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
