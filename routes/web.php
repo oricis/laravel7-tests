@@ -19,3 +19,8 @@ Route::get('500', 'ErrorsController@e500')->name('500');
 
 Route::get('companies-with-active-employees', 'QueriesController@companies')
     ->name('companies.employees.active');
+
+$allowedColors = 'red|green|blue';
+Route::get('colors/{option}/{number}', 'TestRoutesController@index')
+    ->name('colors.index')
+    ->where('option', $allowedColors);
