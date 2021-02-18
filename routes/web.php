@@ -24,3 +24,6 @@ $allowedColors = 'red|green|blue';
 Route::get('colors/{option}/{number}', 'TestRoutesController@index')
     ->name('colors.index')
     ->where('option', $allowedColors);
+
+Route::get('categories/hierarchy', 'CategoriesController@printCategoriesHierarchy')
+    ->name('categories.hierarchy');
