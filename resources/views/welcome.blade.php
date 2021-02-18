@@ -29,7 +29,9 @@
                 display: flex;
                 justify-content: center;
             }
-
+            .flex-column {
+                flex-direction: column;
+            }
             .position-ref {
                 position: relative;
             }
@@ -88,10 +90,16 @@
                     Laravel 7
                 </div>
 
-                <div class="flex-center">
+                <div class="flex-center flex-column">
 
                     <a href="{{ route('companies.employees.active') }}" class="">
                         Ver empresas con empleados activos
+                    </a>
+                    <a href="{{ route('404') }}" class="">
+                        404
+                    </a>
+                    <a href="{{ route('500') }}" class="">
+                        500
                     </a>
                 </div>
 

@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/welcome', 'welcome');
+Route::get('404', 'ErrorsController@e404')->name('404');
+Route::get('500', 'ErrorsController@e500')->name('500');
 
 Route::get('companies-with-active-employees', 'QueriesController@companies')
     ->name('companies.employees.active');
