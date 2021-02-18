@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Seeders\CompanySeeder;
+use Seeders\EmployeeSeeder;
+use Seeders\CategorySeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,5 +16,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CompanySeeder::class);
         $this->call(EmployeeSeeder::class);
+        $this->call(CategorySeeder::class);
     }
 }

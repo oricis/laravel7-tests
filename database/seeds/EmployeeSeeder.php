@@ -1,5 +1,7 @@
 <?php
 
+namespace Seeders;
+
 use App\Models\Employee;
 use Illuminate\Database\Seeder;
 
