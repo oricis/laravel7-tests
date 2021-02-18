@@ -18,4 +18,12 @@ class Category extends Model
     {
         return $this->belongsTo('App\Models\Category', 'parent_id');
     }
+
+
+    public static function getHierarchy(bool $onlyActive = false): array
+    {
+        // TODO:
+
+        return [];
+    }
 }

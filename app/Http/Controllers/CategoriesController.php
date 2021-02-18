@@ -10,6 +10,6 @@ class CategoriesController extends Controller
     public function printCategoriesHierarchy()
     {
         dump(__METHOD__);
-
+        dump(Category::getHierarchy());
     }
 }
