@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class TestRoutesController extends Controller
+class TestRouteController extends Controller
 {
     public function index(string $color, int $number)
     {

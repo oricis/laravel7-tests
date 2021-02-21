@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Company;
 use Illuminate\Support\Facades\DB;
 
-class QueriesController extends Controller
+class QueryController extends Controller
 {
 
     public function companies()
@@ -38,6 +38,14 @@ class QueriesController extends Controller
 
             dump('Todas las empresas con empleados activos y sus empleados (solo activos)');
             dump($companiesFinal->pluck('name'), $companiesFinal->pluck('employees'));
+
+        $x = Company::with([
+            'employees' => (function ($query) {
+                $query->whereActive(1);
+            })
+        ])->whereHas('employees', function ($query) {
+            $query->whereActive(1);
+        })->get();
     }
 }
 // SELECT * FROM companies, employees
