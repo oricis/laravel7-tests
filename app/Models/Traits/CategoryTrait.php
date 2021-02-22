@@ -46,28 +46,18 @@ trait CategoryTrait
             return  $category->name;
         }
 
-        $parent = $category->parent;
-        $hierarchy = [$category->name, $parent->name]; // [actual, parent]
+        $hierarchy = [$category->name];
 
-        $grandparent = ($parent->parent_id)
-            ? $parent->parent
+        $ancestor = ($category->parent)
+            ? $category->parent
             : null;
-        if ($grandparent) {
-            $hierarchy[] = $grandparent->name;
 
-            $greatGrandparent = ($grandparent->parent_id)
-                ? $grandparent->parent
+        while ($ancestor !== null) {
+            $hierarchy[] = $ancestor->name;
+
+            $ancestor = ($ancestor->parent)
+                ? $ancestor->parent
                 : null;
-
-            if ($greatGrandparent) {
-                $hierarchy[] = $greatGrandparent->name;
-
-                $greatGreatGrandparent = ($greatGrandparent->parent_id)
-                    ? $greatGrandparent->parent
-                    : null;
-
-                // ...
-            }
         }
 
         $orderedHierarchy = array_reverse($hierarchy);
