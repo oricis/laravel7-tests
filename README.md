@@ -7,13 +7,13 @@ by one git tag.
 
  > v.1.0.0 - Queries
 
-    Queries to get the active company employees
-    Question on: https://es.stackoverflow.com/questions/423325
+   Queries to get the active company employees
+   Question on: https://es.stackoverflow.com/questions/423325
 
 
  > v.2.0.0 - Error pages
 
-    Publish Laravel default error pages and use routes to test some of them.
+   Publish Laravel default error pages and use routes to test some of them.
 
 
  > v.3.0.0 - Route filter
@@ -21,6 +21,16 @@ by one git tag.
    Use a filter to allow a route param belongs to a list of values.
    Question on: https://es.stackoverflow.com/questions/428657
 
+ > v.4.0.0 - Categories hierarchy
+
+   Shows the categories with their ancestors hierarchy, f.e.
+
+      Irwin Mosciski
+      Nayeli Kerluke
+      Nayeli Kerluke > Ivy Beier
+      Prof. Mose
+      Prof. Mose > Erin Bergnaum
+      Prof. Mose > Erin Bergnaum > Alf White
 
 ***
 ***
