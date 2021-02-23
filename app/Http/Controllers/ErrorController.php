@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class ErrorsController extends Controller
+class ErrorController extends Controller
 {
 
     public function e404()

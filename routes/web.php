@@ -14,13 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/welcome', 'welcome');
-Route::get('404', 'ErrorsController@e404')->name('404');
-Route::get('500', 'ErrorsController@e500')->name('500');
+Route::get('404', 'ErrorController@e404')->name('404');
+Route::get('500', 'ErrorController@e500')->name('500');
 
-Route::get('companies-with-active-employees', 'QueriesController@companies')
+Route::get('companies-with-active-employees', 'QueryController@companies')
     ->name('companies.employees.active');
 
 $allowedColors = 'red|green|blue';
-Route::get('colors/{option}/{number}', 'TestRoutesController@index')
+Route::get('colors/{option}/{number}', 'TestRouteController@index')
     ->name('colors.index')
     ->where('option', $allowedColors);
+
+Route::get('categories/hierarchy', 'CategoryController@printCategoriesHierarchy')
+    ->name('categories.hierarchy');

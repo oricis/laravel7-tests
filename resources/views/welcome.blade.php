@@ -95,6 +95,8 @@
                     <a href="{{ route('companies.employees.active') }}" class="">
                         Ver empresas con empleados activos
                     </a>
+
+                    <hr>
                     <a href="{{ route('404') }}" class="">
                         404
                     </a>
@@ -106,10 +108,18 @@
                         500
                     </a>
 
+                    <hr>
                     <a href="{{ route('colors.index', ['red', 1]) }}">Red</a>
                     <a href="{{ route('colors.index', ['green', 2]) }}">Green</a>
                     <a href="{{ route('colors.index', ['blue', 3]) }}">Blue</a>
                     <a href="{{ route('colors.index', ['unaccepted', 4]) }}">No acepted route param</a>
+
+                    <hr>
+                    <a href="{{ route('categories.hierarchy') }}">
+                        CategoriesHierarchy
+                    </a>
+
+
                 </div>
 
                 <div class="links top-10">
