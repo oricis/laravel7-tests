@@ -73,7 +73,7 @@
         </style>
 
         <script defer src="{{ asset('js/common.js') }}"></script>
-        <script defer src="{{ asset('js/api-calls.js') }}"></script>
+        <script defer src="{{ asset('js/FetchHttp.js') }}"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
