@@ -57,7 +57,7 @@
                 font-size: 84px;
             }
 
-            .links > a {
+            .links a {
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 13px;
@@ -85,16 +85,75 @@
 
                 <div class="flex-center flex-column">
 
-                    <ul>
-                        <li><a href="{{ route('tags.destroy', 0) }}">Delete</a></li>
-                        <li><a href="{{ route('tags.index') }}">Get</a></li>
-                        <li><a href="{{ route('tags.store') }}">Post</a></li>
-                        <li><a href="{{ route('tags.update', 0) }}">Put</a></li>
+                    <ul class="fetch-calls links">
+                        <li><a data-href="{{ route('tags.destroy', 0) }}">Delete</a></li>
+                        <li><a data-href="{{ route('tags.index') }}">Get</a></li>
+                        <li><a data-href="{{ route('tags.store') }}">Post</a></li>
+                        <li><a data-href="{{ route('tags.update', 0) }}">Put</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
         @include('crud-forms')
+
+        <script>
+            const fetchLinks = document.querySelectorAll('.fetch-calls a');
+            for (let i = 0; i < fetchLinks.length; i++) {
+                fetchLinks[i].addEventListener('click', function (event)
+                {
+                    const http = new FetchHttp;
+
+                    const action = event.target.text;
+                    const route = event.target.dataset['href'];
+
+                    if (action === 'Get') {
+                        http.get(
+                            route,
+                            getCsrfToken(),
+                            getApiToken()
+                        ).then(response =>
+                        {
+                            console.log(response);
+                        });
+                    }
+                    if (action === 'Post') {
+                        http.post(
+                            route,
+                            {},
+                            getCsrfToken(),
+                            getApiToken()
+                        ).then(response =>
+                        {
+                            console.log(response);
+                        });
+                    }
+                    if (action === 'Delete') {
+                        http.delete(
+                            route,
+                            {},
+                            getCsrfToken(),
+                            getApiToken()
+                        ).then(response =>
+                        {
+                            console.log(response);
+                        });
+                    }
+                    if (action === 'Put') {
+                        http.put(
+                            route,
+                            {},
+                            getCsrfToken(),
+                            getApiToken()
+                        ).then(response =>
+                        {
+                            console.log(response);
+                        });
+                    }
+
+                });
+            }
+
+        </script>
     </body>
 </html>
