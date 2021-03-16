@@ -119,6 +119,11 @@
                         CategoriesHierarchy
                     </a>
 
+                    <hr>
+                    <a href="{{ route('fetch.show') }}">
+                        Test Fetch request
+                    </a>
+
 
                 </div>
 

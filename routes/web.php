@@ -27,3 +27,6 @@ Route::get('colors/{option}/{number}', 'TestRouteController@index')
 
 Route::get('categories/hierarchy', 'CategoryController@printCategoriesHierarchy')
     ->name('categories.hierarchy');
+
+Route::view('fetch', 'fetch')
+    ->name('fetch.show');
