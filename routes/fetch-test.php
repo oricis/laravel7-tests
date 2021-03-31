@@ -19,3 +19,6 @@ Route::put('tags/{id}', 'TagController@update')
     ->name('tags.update');
 Route::delete('tags/{id}', 'TagController@destroy')
     ->name('tags.destroy');
+
+Route::post('images/store', 'ImageController@store')
+    ->name('images.store');
