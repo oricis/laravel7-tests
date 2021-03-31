@@ -30,3 +30,6 @@ Route::get('categories/hierarchy', 'CategoryController@printCategoriesHierarchy'
 
 Route::view('fetch', 'fetch')
     ->name('fetch.show');
+Route::view('fetch-image', 'fetch-image')
+    ->name('fetch.image.uploader');
+

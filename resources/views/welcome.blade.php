@@ -123,6 +123,10 @@
                     <a href="{{ route('fetch.show') }}">
                         Test Fetch request
                     </a>
+                    <a href="{{ route('fetch.image.uploader') }}">
+                        Test Fetch request: upload image
+                    </a>
+
 
 
                 </div>
